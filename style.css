@@ -9,7 +9,7 @@ body {
     padding: 20px;
 }
 
-.container {
+.mon-portfolio-global {
     background-color: white;
     width: 100%;
     max-width: 1100px;
@@ -20,7 +20,7 @@ body {
     height: 650px;
 }
 
-.left-column {
+.ma-barre-laterale {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     width: 300px;
     display: flex;
@@ -32,7 +32,7 @@ body {
     flex-shrink: 0;
 }
 
-.profile-img {
+.photo-ronde {
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -43,14 +43,14 @@ body {
     display: block;
 }
 
-.right-column {
+.zone-contenu-principal {
     flex: 1;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.nav-bar {
+.barre-menu {
     background: white;
     padding: 20px 40px;
     display: flex;
@@ -59,7 +59,7 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.nav-btn {
+.bouton-nav {
     background-color: #f0f0f0;
     color: #764ba2;
     width: 50px;
@@ -75,28 +75,28 @@ body {
     border: none;
 }
 
-.nav-btn:hover, .nav-btn.active {
+.bouton-nav:hover, .bouton-nav.actif {
     background-color: #764ba2;
     color: white;
     transform: translateY(-3px);
 }
 
-.content-area {
+.affichage-pages {
     padding: 40px;
     overflow-y: auto;
     height: 100%;
 }
 
-.page-section {
+.une-section {
     display: none;
-    animation: fadeIn 0.5s;
+    animation: effetApparition 0.5s;
 }
 
-.page-section.active-section {
+.une-section.section-visible {
     display: block;
 }
 
-@keyframes fadeIn {
+@keyframes effetApparition {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
@@ -105,7 +105,7 @@ h1 { font-size: 2.5em; margin: 0; color: #333; }
 h2 { color: #764ba2; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
 p { color: #555; line-height: 1.6; }
 
-.status-box {
+.encadre-statut {
     background: #eef2f5;
     padding: 20px;
     border-radius: 8px;
@@ -118,9 +118,14 @@ th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
 th { background-color: #f8f8f8; color: #333; }
 th:first-child, td:first-child { min-width: 150px; }
 tr:nth-child(even) { background-color: #f9f9f9; }
-.row-ulco { background-color: #e8f6f3 !important; font-weight: bold; border-left: 4px solid #2ecc71; }
 
-.project-card {
+.annee-actuelle { 
+    background-color: #e8f6f3 !important; 
+    font-weight: bold; 
+    border-left: 4px solid #2ecc71; 
+}
+
+.carte-competence {
     background: #f9f9f9;
     padding: 20px;
     margin-bottom: 15px;
@@ -128,7 +133,7 @@ tr:nth-child(even) { background-color: #f9f9f9; }
     border-left: 4px solid #764ba2;
 }
 
-.contact-box {
+.boite-contact {
     background: #333;
     color: rgb(255, 255, 255);
     padding: 30px;
@@ -136,4 +141,4 @@ tr:nth-child(even) { background-color: #f9f9f9; }
     text-align: center;
     margin-top: 20px;
 }
-.contact-box a { color: rgb(255, 255, 255); text-decoration: none; font-size: 1.2em; }
+.boite-contact a { color: rgb(255, 255, 255); text-decoration: none; font-size: 1.2em; 
