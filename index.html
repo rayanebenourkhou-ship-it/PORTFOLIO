@@ -3,81 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Rayane Benourkhou</title>
+    <title>Portfolio - Rayane Benourkhou</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <div class="left-column">
-            <img src="cv.jpg" alt="Photo de profil" class="profile-img">
+    <div class="mon-portfolio-global">
+        
+        <div class="ma-barre-laterale">
+            <img src="CV.jpg" alt="Rayane Benourkhou" class="photo-ronde">
             <h3>Rayane Benourkhou</h3>
-            <p>Licence Informatique</p>
+            <p class="sous-titre">Licence Informatique</p>
         </div>
 
-        <div class="right-column">
+        <div class="zone-contenu-principal">
             
-            <div class="nav-bar">
-                <button class="nav-btn active" onclick="showPage('accueil')"><i class="fas fa-home"></i></button>
-                <button class="nav-btn" onclick="showPage('parcours')"><i class="fas fa-graduation-cap"></i></button>
-                <button class="nav-btn" onclick="showPage('projets')"><i class="fas fa-code"></i></button>
-                <button class="nav-btn" onclick="showPage('contact')"><i class="fas fa-envelope"></i></button>
+            <div class="barre-menu">
+                <button class="bouton-nav actif" onclick="changerSection('accueil')">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button class="bouton-nav" onclick="changerSection('parcours')">
+                    <i class="fas fa-graduation-cap"></i>
+                </button>
+                <button class="bouton-nav" onclick="changerSection('projets')">
+                    <i class="fas fa-code"></i>
+                </button>
+                <button class="bouton-nav" onclick="changerSection('contact')">
+                    <i class="fas fa-envelope"></i>
+                </button>
             </div>
 
-            <div class="content-area">
+            <div class="affichage-pages">
                 
-                <div id="accueil" class="page-section active-section">
+                <div id="accueil" class="une-section section-visible">
                     <h1>Salut,</h1>
-                    <p class="intro-text">Je suis <strong>Rayane Benourkhou</strong>.</p>
+                    <p class="texte-intro">Je suis <strong>Rayane Benourkhou</strong>.</p>
                     
-                    <div class="status-box">
+                    <div class="encadre-statut">
                         <strong>Statut Actuel :</strong><br>
                         Étudiant en Licence Informatique à l'ULCO Calais.
                     </div>
                     
-                    <p style="margin-top: 20px;">
+                    <p style="margin-top: 25px;">
                         Bienvenue sur mon portfolio. Je me forme pour devenir <strong>Ingénieur en Cybersécurité</strong>.
                     </p>
                 </div>
 
-                <div id="parcours" class="page-section">
+                <div id="parcours" class="une-section">
                     <h2>Mon Parcours Scolaire</h2>
-                    <table>
+                    <table class="tableau-ecole">
                         <thead>
-                            <tr><th>Année</th><th>Niveau</th><th>Établissement</th></tr>
+                            <tr>
+                                <th>Année</th>
+                                <th>Niveau</th>
+                                <th>Établissement</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr><td>2022 &nbsp;&nbsp;-&nbsp;&nbsp; 2023</td><td>Seconde</td><td>École Internationale Algérienne (Paris)</td></tr>
-                            <tr><td>2023 &nbsp;&nbsp;-&nbsp;&nbsp; 2024</td><td>Première</td><td>École Internationale Algérienne (Paris)</td></tr>
-                            <tr><td>2024 &nbsp;&nbsp;-&nbsp;&nbsp; 2025</td><td>Terminale</td><td>École Internationale Algérienne (Paris)</td></tr>
-                            <tr class="row-ulco"><td>2025 &nbsp;&nbsp;-&nbsp;&nbsp; 2026</td><td>Licence Info</td><td>ULCO Calais</td></tr>
+                            <tr>
+                                <td>2022 - 2023</td>
+                                <td>Seconde</td>
+                                <td>École Int. Algérienne (Paris)</td>
+                            </tr>
+                            <tr>
+                                <td>2023 - 2024</td>
+                                <td>Première</td>
+                                <td>École Int. Algérienne (Paris)</td>
+                            </tr>
+                            <tr>
+                                <td>2024 - 2025</td>
+                                <td>Terminale</td>
+                                <td>École Int. Algérienne (Paris)</td>
+                            </tr>
+                            <tr class="annee-actuelle">
+                                <td>2025 - 2026</td>
+                                <td>Licence Info</td>
+                                <td>ULCO Calais</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div id="projets" class="page-section">
+                <div id="projets" class="une-section">
                     <h2>Projets & Compétences</h2>
                     
-                    <div class="project-card">
+                    <div class="carte-competence">
                         <h3><i class="fab fa-python"></i> Python</h3>
                         <p>Développement de scripts et algorithmes. Niveau Intermédiaire.</p>
                     </div>
 
-                    <div class="project-card">
+                    <div class="carte-competence">
                         <h3><i class="fab fa-html5"></i> HTML / CSS</h3>
                         <p>Création de sites web responsives et portfolios personnels.</p>
                     </div>
 
-                    <div class="project-card">
+                    <div class="carte-competence">
                         <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
                         <p>Objectif professionnel. Apprentissage des bases réseaux et sécurité.</p>
                     </div>
                 </div>
 
-                <div id="contact" class="page-section">
+                <div id="contact" class="une-section">
                     <h2>Me Contacter</h2>
-                    <div class="contact-box">
+                    <div class="boite-contact">
                         <i class="fas fa-envelope fa-3x"></i><br><br>
                         <a href="mailto:rayanebenourkhou@gmail.com">rayanebenourkhou@gmail.com</a>
                     </div>
@@ -88,18 +117,23 @@
     </div>
 
     <script>
-        function showPage(pageId) {
-            const sections = document.querySelectorAll('.page-section');
-            sections.forEach(section => {
-                section.classList.remove('active-section');
+        function changerSection(idDeLaPage) {
+            var toutesLesSections = document.querySelectorAll('.une-section');
+            toutesLesSections.forEach(function(section) {
+                section.classList.remove('section-visible');
             });
-            document.getElementById(pageId).classList.add('active-section');
 
-            const buttons = document.querySelectorAll('.nav-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
+            var sectionAffiche = document.getElementById(idDeLaPage);
+            if (sectionAffiche) {
+              sectionAffiche.classList.add('section-visible');
+            }
+
+      var tousLesBoutons = document.querySelectorAll('.bouton-nav');
+          tousLesBoutons.forEach(function(btn) {
+                btn.classList.remove('actif');
             });
-            event.currentTarget.classList.add('active');
+            
+            event.currentTarget.classList.add('actif');
         }
     </script>
 </body>
