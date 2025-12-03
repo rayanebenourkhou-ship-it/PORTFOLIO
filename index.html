@@ -105,10 +105,36 @@
                 </div>
 
                 <div id="contact" class="une-section">
-                    <h2>Me Contacter</h2>
-                    <div class="boite-contact">
-                        <i class="fas fa-envelope fa-3x"></i><br><br>
-                        <a href="mailto:rayanebenourkhou@gmail.com">rayanebenourkhou@gmail.com</a>
+                    <h2>Me contacter</h2>
+                    
+                    <div class="conteneur-bleu">
+                        <form action="mailto:rayanebenoukhou@gmail.com" method="post" enctype="text/plain">
+                            
+                            <fieldset class="cadre-infos">
+                                <legend>Informations personnelles</legend>
+
+                                <div class="groupe-input">
+                                    <label>Nom et prénom :</label>
+                                    <input type="text" placeholder="Ex : Rayane Benourkhou" required>
+                                </div>
+
+                                <div class="groupe-input">
+                                    <label>Email :</label>
+                                    <input type="email" placeholder="Ex : contact@email.com" required>
+                                </div>
+
+                                <div class="groupe-input">
+                                    <label>Votre message :</label>
+                                    <textarea placeholder="Écrivez votre message ici..." rows="4"></textarea>
+                                </div>
+
+                                <div class="boutons-form">
+                                    <button type="submit" class="btn-principal">Envoyer</button>
+                                    <button type="reset" class="btn-secondaire">Effacer</button>
+                                </div>
+
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
 
@@ -125,11 +151,11 @@
 
             var sectionAffiche = document.getElementById(idDeLaPage);
             if (sectionAffiche) {
-              sectionAffiche.classList.add('section-visible');
+                sectionAffiche.classList.add('section-visible');
             }
 
-      var tousLesBoutons = document.querySelectorAll('.bouton-nav');
-          tousLesBoutons.forEach(function(btn) {
+            var tousLesBoutons = document.querySelectorAll('.bouton-nav');
+            tousLesBoutons.forEach(function(btn) {
                 btn.classList.remove('actif');
             });
             
